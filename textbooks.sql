@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.5.2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 18, 2012 at 03:04 PM
--- Server version: 5.1.53
--- PHP Version: 5.3.17
+-- Generation Time: Oct 22, 2012 at 04:58 PM
+-- Server version: 5.5.25a
+-- PHP Version: 5.4.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `textbooks`
+-- Database: `jmutextbooks`
 --
 
 -- --------------------------------------------------------
@@ -34,7 +34,15 @@ CREATE TABLE IF NOT EXISTS `textbooks` (
   `Price` varchar(8) NOT NULL,
   `userID` int(10) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `textbooks`
+--
+
+INSERT INTO `textbooks` (`ID`, `Title`, `ISBN`, `Condition`, `Price`, `userID`) VALUES
+(1, 'Operations and Supply Chain Management', '1234567890123', 'Good', '80.00', 2),
+(2, 'Philosophy of the United States', '3210987654321', 'Good', '20.00', 1);
 
 -- --------------------------------------------------------
 
@@ -49,7 +57,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `email`, `password`, `firstname`, `lastname`) VALUES
+(1, 'whetzejs@dukes.jmu.edu', '0d107d09f5bbe40cade3de5c71e9e9b7', 'Jason', 'Whetzel'),
+(2, 'reynolwh@dukes.jmu.edu', '0d107d09f5bbe40cade3de5c71e9e9b7', 'Wade', 'Reynolds');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
