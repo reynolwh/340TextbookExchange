@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript">	
+			function validate() {
+				if (document.forms.registration.firstname.value == "")
+				{
+					alert('Please enter your first name.');
+					return false;
+				}
+				else if (document.forms.registration.lastname.value == "")
+				{
+					alert('Please enter your last name.');
+					return false;
+				}
+				else if (document.forms.registration.email.value == "")
+				{
+					alert('Please enter your email address.');
+					return false;
+				}
+				else if (document.forms.registration.password.value == "")
+				{
+					alert('Please enter a password.');
+					return false;
+				}
+				else if (document.forms.registration.password.value != document.registration.passwordcheck.value)
+				{
+					alert('Passwords do not match!');
+					return false;
+				}
+				else
+				{
+					document.forms.registration.submit();
+					return true;
+				}
+			}	
+		</script>
+		<title>Textbook Exchange</title>
+		<h1 style="text-align:center; font-family:Arial,Helvetica,sans-serif; color:#FFFFFF; background-color:#3300CC">JMU Textbook Exchange</h1>
+	</head>	
+	<body style="text-align:center; background-color:#3366FF">
+		<form name="registration" action="createaccount.php" method="post">
+			<input type="text" name="firstname" placeholder="First Name"><br>
+			<input type="text" name="lastname" placeholder="Last Name"><br>
+			<input type="text" name="email" placeholder="Email"><br>
+			<input type="password" name="password" placeholder="Password"><br>
+			<input type="password" name="passwordcheck" placeholder="Re-Type Password"><br>
+			<input type="button" onclick="return validate()" value="Submit">
+		</form>
+	</body>
+</html>

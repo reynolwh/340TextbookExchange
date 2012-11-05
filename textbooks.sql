@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 22, 2012 at 04:58 PM
+-- Generation Time: Nov 05, 2012 at 04:14 PM
 -- Server version: 5.5.25a
 -- PHP Version: 5.4.4
 
@@ -30,19 +30,20 @@ CREATE TABLE IF NOT EXISTS `textbooks` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `Title` varchar(250) NOT NULL,
   `ISBN` varchar(20) NOT NULL,
-  `Condition` enum('Like New','Good','Acceptable','Poor') NOT NULL DEFAULT 'Acceptable',
+  `BookCondition` enum('Like New','Good','Acceptable','Poor') NOT NULL DEFAULT 'Acceptable',
   `Price` varchar(8) NOT NULL,
   `userID` int(10) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `textbooks`
 --
 
-INSERT INTO `textbooks` (`ID`, `Title`, `ISBN`, `Condition`, `Price`, `userID`) VALUES
+INSERT INTO `textbooks` (`ID`, `Title`, `ISBN`, `BookCondition`, `Price`, `userID`) VALUES
 (1, 'Operations and Supply Chain Management', '1234567890123', 'Good', '80.00', 2),
-(2, 'Philosophy of the United States', '3210987654321', 'Good', '20.00', 1);
+(2, 'Philosophy of the United States', '3210987654321', 'Good', '20.00', 1),
+(4, 'Intro to Environmental Science and Engineering', '0000000000000', 'Good', '70.00', 1);
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `firstname` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `users`
