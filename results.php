@@ -57,7 +57,7 @@
 						echo "<td>" . $booktitle . "</td>";
 						echo "<td>" . $bookISBN . "</td>";
 						echo "<td>" . $condition . "</td>";
-						echo "<td>" . $email . "</td>";
+						echo '<td><a href="mailto:' . $email . '">' . $email . '</a></td>';
 					echo "</tr>";
 				echo "</table>";
 			}
