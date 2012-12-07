@@ -32,7 +32,6 @@
 				}
 				else
 				{
-					$error = "Email/Password invalid!";
 					header("Location: login.html");
 				}
 			}
